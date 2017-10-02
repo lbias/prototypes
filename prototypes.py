@@ -1,3 +1,4 @@
+import os
 import sys
 
 from django.conf import settings
@@ -13,6 +14,13 @@ settings.configure(
         'django.contrib.staticfiles',
         'sitebuilder',
     ),
+    TEMPLATES=(
+        {
+            'BACKEND': 'django.template.backends.django.DjangoTemplates',
+            'DIRS': [],
+            'APP_DIRS': True,
+        },
+    ),    
     STATIC_URL='/static/',
     SITE_PAGES_DIRECTORY=os.path.join(BASE_DIR, 'pages'),
 )
