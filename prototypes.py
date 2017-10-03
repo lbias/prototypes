@@ -20,9 +20,11 @@ settings.configure(
             'DIRS': [],
             'APP_DIRS': True,
         },
-    ),    
+    ),
     STATIC_URL='/static/',
     SITE_PAGES_DIRECTORY=os.path.join(BASE_DIR, 'pages'),
+    SITE_OUTPUT_DIRECTORY=os.path.join(BASE_DIR, '_build'),
+    STATIC_ROOT=os.path.join(BASE_DIR, '_build', 'static'),
 )
 
 if __name__ == "__main__":
